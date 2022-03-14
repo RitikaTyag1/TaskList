@@ -7,12 +7,38 @@ import Button1 from 'react-bootstrap/Button';
 
 
 const ShowTodo = (props) => {
-// const [page, setPage] = useState('task');    
+
+    const DUMMY_DATA = [
+        {
+             id: 1,
+             listName: 'Shopping List', 
+             listTasks: [
+                 {
+                     task: 'Buy Clothes'
+                 }, 
+                 {
+                     task: 'Buy shoes'
+                 }
+             ]
+        },
+        {
+             id:2, 
+             listName: 'Grocery List', 
+             listTasks: [
+                 {
+                     task: 'Buy fruits'
+                 }, 
+                 {
+                     task: 'Buy juice'
+                 }
+             ]
+        },
+        
+    ]
+  
 const onListClickHandler = (event) => {
 
-    // setPage('task');
-    // console.log('in show todo on list: ' + page);
-    // props.onPageChange(page);
+    
     
     props.setPage('task');
     props.setListID(props.index);
@@ -24,6 +50,7 @@ const onListClickHandler = (event) => {
 
   return (
     <div className='container'>
+         
          <Button1 variant="success" className='list-button' onClick={onListClickHandler}>{props.task}</Button1>{' '}
          {/* <button className='list-button' onClick={onListClickHandler} >  {props.task} </button> */}
          <Button1 variant="danger" className='btn-1'  onClick={()=>{

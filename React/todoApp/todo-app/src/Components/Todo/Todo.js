@@ -6,6 +6,8 @@ import { CgAdd}  from 'react-icons/cg';
 import Button from 'react-bootstrap/Button';
 
 const Todo = (props) => {
+
+   
     const [list, setList] = useState('Enter a list');
     const [data, setData] = useState([]);
     // const [pager, setPager]=useState('');
@@ -31,12 +33,7 @@ const Todo = (props) => {
         setData(finalData);
     }
     
-    // const onPageChange = (page) => {
-    //     console.log('in todo on page: ' + page);
-    //     setPager(page);
-    //     props.value(pager);
-    //     console.log('in todo on page: '+ pager);
-    // }
+   
 
     return (
         <div className="container">
